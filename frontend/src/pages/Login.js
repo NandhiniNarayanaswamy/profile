@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Login() {
     const navigate = useNavigate();
@@ -41,7 +42,7 @@ function Login() {
                         ))}
                         <button className="btn btn-success w-100">Login</button>
                         <p className="mt-3 text-center">
-                            Don’t have an account? <a href="/signup">Register here</a>
+                            Don’t have an account? <Link to="/signup">Register here</Link>
                         </p>
                     </form>
                 </div>

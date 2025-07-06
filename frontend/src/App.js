@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Signup />} />
+        <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route
@@ -19,6 +19,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<h2>404 Page Not Found</h2>} />
       </Routes>
     </Router>
   );
