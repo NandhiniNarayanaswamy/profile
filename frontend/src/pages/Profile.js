@@ -26,7 +26,7 @@ function Profile() {
 
         const fetchProfile = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/user/profile', {
+                const res = await axios.get('https://profile-6g3x.onrender.com/api/user/profile', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setFormData(res.data);
@@ -66,7 +66,7 @@ function Profile() {
         if (!validate()) return;
 
         try {
-            const res = await axios.put('http://localhost:5000/api/user/profile', formData, {
+            const res = await axios.put('https://profile-6g3x.onrender.com/api/user/profile', formData, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setFormData(res.data);

@@ -80,7 +80,7 @@ function Signup() {
         if (!validate()) return;
 
         try {
-            const res = await axios.post('http://localhost:5000/api/auth/signup', formData);
+            const res = await axios.post('https://profile-6g3x.onrender.com/api/auth/signup', formData);
             localStorage.setItem('token', res.data.token);
             navigate('/profile');
         } catch (err) {

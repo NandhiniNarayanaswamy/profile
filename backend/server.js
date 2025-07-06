@@ -11,7 +11,10 @@ dotenv.config(); // ✅ Load environment variables
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+    origin: ['https://effortless-pasca-d07302.netlify.app'], // Replace with your real Netlify URL
+    credentials: true,
+}));
 app.use(express.json());
 
 // Connect to MongoDB
